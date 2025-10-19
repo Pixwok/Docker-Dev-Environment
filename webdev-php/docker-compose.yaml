@@ -22,7 +22,7 @@ services:
       - db
   #DB PostgreSQL
   db:
-    image: postgres:latest
+    image: postgres:17.6
     container_name: postgresql
     ports:
       - 5432:5432
