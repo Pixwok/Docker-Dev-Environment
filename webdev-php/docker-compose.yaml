@@ -16,7 +16,7 @@ services:
   #PHP
   php:
     build: ./php
-    image: 
+    image: pixwok-php
     container_name: php
     volumes:
       - ./app:/var/www/html
