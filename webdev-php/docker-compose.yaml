@@ -1,5 +1,3 @@
-version: '3' # Version de docker compose à utiliser
-
 services:
   ## NGINX
   nginx:
@@ -20,6 +18,8 @@ services:
     container_name: php
     volumes:
       - ./app:/var/www/html
+    depends_on:
+      - db
   #DB PostgreSQL
   db:
     image: postgres:latest
