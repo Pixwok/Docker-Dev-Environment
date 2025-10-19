@@ -1,0 +1,14 @@
+version: '3' # Version de docker compose à utiliser
+
+services:
+  ## NGINX
+  nginx:
+    image: nginx:stable
+    container_name: nginx
+    ports: 
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./app:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+
